@@ -86,7 +86,7 @@ Os dados consumidos pelo consumer.py são salvos em um banco de dados SQLite cha
 ### Opção 1: Usar uma Ferramenta Gráfica (Recomendado)
 - Baixe e instale o DB Browser for SQLite, uma ferramenta gratuita e fácil de usar: [DB Browser for SQLite](https://sqlitebrowser.org/dl/)
 - Abra o programa, clique em "Open Database" e selecione o arquivo `bd_sensores.db` no diretório do projeto.
-- Vá até a aba "Browse Data" e selecione a tabela `tb_monitoramento` para ver os dados salvos (colunas: id, sensor_id, temperature, humidity, timestamp).
+- Vá até a aba "Browse Data" e selecione a tabela `tb_monitoramento` para ver os dados salvos (colunas: id, id_sensor, temperatura, umidade, dt_hr).
 
 ### Opção 2: Usar o SQLite via Terminal
 - Se o SQLite estiver instalado, abra um terminal no diretório do projeto e execute:
@@ -94,7 +94,7 @@ Os dados consumidos pelo consumer.py são salvos em um banco de dados SQLite cha
     sqlite3 bd_sensores.db
 - Dentro do SQLite, execute a consulta:
     ```sql
-    SELECT * FROM sensor_readings LIMIT 10;
+    SELECT * FROM tb_monitoramento LIMIT 10;
 Isso mostrará os primeiros 10 registros salvos.
 - Para instalar o SQLite no Windows, baixe os binários em [SQLite Download Page](https://www.sqlite.org/download.html) e siga as instruções de configuração no PATH.
 
